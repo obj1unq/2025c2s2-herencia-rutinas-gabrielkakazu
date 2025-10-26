@@ -1,4 +1,4 @@
-import rutinas.*
+import rutina.*
 
 describe "tests 1" {
     test "running en la playa" {
