@@ -1,4 +1,5 @@
 import gimnasia.*
+import clubes.*
 
 class Persona {
     var property peso

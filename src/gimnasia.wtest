@@ -1,5 +1,6 @@
 import gimnasia.*
 import personas.*
+import clubes.*
 
 describe "rutinas" {
 
@@ -138,10 +139,11 @@ describe "rutinas" {
 	}
 	 
 //punto 3: Consultas
-//	test "3.1 el mejor predio" {
+	test "3.1 el mejor predio" {
+                
 //		//El mejor predio del clubBarrial para bob debería ser recreo		
 //		//El mejor predio del clubBarrial para calamardo debería ser recreo		
-//	}	
+	}	
 	
 //	test "3.2 predios tranquis" {
 //		//No debería haber predios tranquis en el clubBarrial para bob
