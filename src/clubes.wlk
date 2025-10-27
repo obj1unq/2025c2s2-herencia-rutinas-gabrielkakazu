@@ -26,10 +26,6 @@ class Predio {
     method siSePuedePracticar(rutina) {
         return rutinasPracticables.contains(rutina)
     }
-/*
-    method agregarRutina(rutina) {
-        rutinasPracticables.add(rutina)
-    }*/
 
     method totalDeCalorias(persona){
         return rutinasPracticables.sum(

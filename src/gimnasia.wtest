@@ -31,10 +31,10 @@ describe "rutinas" {
 	const nautico = new Predio(delClub = clubBarrial, rutinasPracticables = #{remarEnElDelta, remarEnCaminoRemeros})
         //un predio con remarEnElDelta y remarEnCaminoRemeros
 
-	const clubBarrial = new Club(predios = 1) //un club con recreo y nautico
+	const clubBarrial = new Club(predios = #{remarEnElDelta, remarEnCaminoRemeros}) //un club con recreo y nautico
         //const prediosDeClubBarrial = [recreo, nautico]
-
- /*       clubBarrial.agregarPredio(recreo)
+/*
+        clubBarrial.agregarPredio(recreo)
         clubBarrial.agregarPredio(nautico)*/
 
 //	
@@ -153,15 +153,18 @@ describe "rutinas" {
 	 
 //punto 3: Consultas
 	test "3.1 el mejor predio" {
-                assert.that(true)
 //		//El mejor predio del clubBarrial para bob debería ser recreo		
+                assert.equals(recreo, clubBarrial.elMejorPredioPara(bob))
 //		//El mejor predio del clubBarrial para calamardo debería ser recreo		
+                assert.equals(recreo, clubBarrial.elMejorPredioPara(calamardo))
 	}	
 	
-//	test "3.2 predios tranquis" {
+	test "3.2 predios tranquis" {
 //		//No debería haber predios tranquis en el clubBarrial para bob
+                assert.that(clubBarrial.esTranquiPara(bob).isEmpty())
 //		//Los predios tranquis del clubBarrial para calamardo solo incluyen a recreo  
-//	}
+                assert.that(clubBarrial.esTranquiPara(bob).contains(recreo))
+	}
 	
 //	test "3.3 rutinas más exigentes" {
 //		//Las rutinas más exigentes del clubBarrial para bob son maratonBA y remarEnCaminoRemeros
