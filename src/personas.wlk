@@ -3,9 +3,11 @@ import clubes.*
 
 class Persona {
     var property peso
+    
+    method tiempo() {return }
 
-    method pesoQuePierde(rutina, tiempo) {
-        return rutina.caloriasGastadas(tiempo) /
+    method pesoQuePierde(rutina) {
+        return rutina.caloriasGastadas(self.tiempo()) /
             self.kilosPorCaloriaQuePierde()
     }
 
@@ -13,12 +15,12 @@ class Persona {
         return
     }
 
-    method realizar(rutina, tiempo){
-        self.validar(rutina, tiempo)
-        peso -= self.pesoQuePierde(rutina, tiempo)
+    method realizar(rutina){
+        self.validar(rutina)
+        peso -= self.pesoQuePierde(rutina)
     }
 
-    method validar(rutina, tiempo){
+    method validar(rutina){
         return if (!self.puedeRealizar(rutina)){
             self.error("no puedo realizar Rutina")
         }
@@ -39,13 +41,13 @@ class Sedentario inherits Persona {
 }
 
 class Atleta inherits Persona {
-    override method pesoQuePierde(rutina, tiempo){
-        return super(rutina, tiempo) -1
+    override method pesoQuePierde(rutina){
+        return super(rutina) -1
     }
 
     override method kilosPorCaloriaQuePierde() = 8000
 
-    method tiempo() = 90
+    override method tiempo() = 90
 
     override method puedeRealizar(rutina){
         return rutina.caloriasGastadas(self.tiempo()) > 10000

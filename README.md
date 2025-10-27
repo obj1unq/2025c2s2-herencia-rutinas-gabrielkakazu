@@ -114,9 +114,7 @@ para cada tipo de persona:
 
 ### Personas atletas
 
-Las personas atletas tienen una variación en su fórmula para
-calcular el peso al practicar una rutina, porque siempre pierden
-un kilo menos que el resto de las personas 
+Las personas atletas tienen una variación en su fórmula para calcular el peso al practicar una rutina, porque siempre pierden un kilo menos que el resto de las personas 
 
 - Formula de peso que se pierde al hacer una rutina: ` (calorias que baja la rutina / kilosPorCaloría) - 1 ` 
 *Nota:* La primera parte es igual que la fórmula para todas las personas
@@ -149,21 +147,15 @@ Se pide:
 
 - Los predios tranquis de un club  para una persona: Es el conjunto de predios que tienen al menos una rutina que le hace gastar menos de 500 calorias a la persona
 
-- Las rutinas más exigentes del club para una persona: Es el conjunto
-formado por la rutina más exigente de cada predio para esa persona. La rutina más exigente es la que más calorías le hace quemar a esa persona
+- Las rutinas más exigentes del club para una persona: Es el conjunto formado por la rutina más exigente de cada predio para esa persona. La rutina más exigente es la que más calorías le hace quemar a esa persona
 
 ** Ejemplos ** 
  
-El **club barrial** tiene dos predios. El **náutico**, desde dónde
-se puede remar en el delta y en el camino de los remeros, y 
-el **recreo**, dónde se puede correr por la playa y correr la maratón
-de buenos aires.
+El **club barrial** tiene dos predios. El **náutico**, desde dónde se puede remar en el delta y en el camino de los remeros, y  el **recreo**, dónde se puede correr por la playa y correr la maratón de buenos aires.
 
-- El mejor predio del club barrial para bob es el **recreo**. Ya que le
-hace gastar 35700 mientras que náutico le hace gastar 22110
+- El mejor predio del club barrial para bob es el **recreo**. Ya que le hace gastar 35700 mientras que náutico le hace gastar 22110
 
-- El mejor predio del club barrial para calamardo es el **recreo**. Ya que le
-hace gastar 1260 mientras que náutico le hace gastar 1030
+- El mejor predio del club barrial para calamardo es el **recreo**. Ya que le hace gastar 1260 mientras que náutico le hace gastar 1030
 
 - Para bob no hay predios tranquis en el club barrial, 
 
@@ -173,7 +165,6 @@ la playa gastando solo 360 calorías
 -para bob las rutinas más exigentes del club barrial
 son la maratón de buenos aires y remar en el camino de los remeros.
 
--para calamardo  las rutinas más exigentes del club barrial
-son la maratón de buenos aires y remar en el delta.
+-para calamardo  las rutinas más exigentes del club barrial son la maratón de buenos aires y remar en el delta.
 
 
