@@ -1,6 +1,33 @@
 import gimnasia.*
 import personas.*
 
+class Predio {
+//    var property delClub
+    var property rutinasPracticables
+
+    method siSePuedePracticar(rutina) {
+        return rutinasPracticables.contains(rutina)
+    }
+
+    method totalDeCalorias(persona){
+        return rutinasPracticables.sum(
+            {rutina => rutina.caloriasGastadas(persona.tiempo())}
+            )
+    }
+
+    method esTranquiPara(persona){
+        return rutinasPracticables.any({
+            rutina => rutina.caloriasGastadas(persona.tiempo()) < 500
+        })
+    }
+
+     method rutinaMasExigentePara(persona) {
+        return rutinasPracticables.max(
+            { rutina => rutina.caloriasGastadas(persona.tiempo()) 
+            })
+    }
+}
+
 class Club {
     var property predios
 
@@ -14,30 +41,13 @@ class Club {
 
     method esTranquiPara(persona) {
         return self.predios().filter(
-            {predio => predio.tieneRutinatranquiPara(persona)})
+            {predio => predio.esTranquiPara(persona)})
     }
 
-}
-
-class Predio {
-    var property delClub
-    var property rutinasPracticables
-
-    method siSePuedePracticar(rutina) {
-        return rutinasPracticables.contains(rutina)
+    method rutinasMasExigentesPara(persona) {
+        return predios.map({ predio => predio.rutinaMasExigentePara(persona) })
     }
 
-    method totalDeCalorias(persona){
-        return rutinasPracticables.sum(
-            {rutina => rutina.caloriasGastadas(persona.tiempo())}
-            )
-    }
-
-    method tieneRutinatranquiPara(persona){
-        return rutinasPracticables.any({
-            rutina => rutina.caloriasGastadas(persona.tiempo()) >= 500
-        })
-    }
 
 
 }
